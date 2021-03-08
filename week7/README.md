@@ -6,6 +6,7 @@ This week we looked at Brecht's A-effect and how it intentionally breaks immersi
 One of my favourite films is Nolan's interstellar so I opted to choose this for the task. 
 #### Still 1
 ![](img/interstellar2.jpg)
+\
 To me this scene conveys a sense of danger and despair. The fiery orange is in stark contrast to the dark and muted earthy tones which illustrate damage and discourse. 
 \
 \
@@ -17,6 +18,7 @@ My colour palette:
 ![](img/2.png)
 #### Still 2
 ![](img/interstellar11.jpg)
+\
 I think the colours here represent a feel of inhospitality and emptiness. The icy  light blue give an impression of an environment that is unwelcoming and the little variation in tone makes this environment seem vast and unnatural, encouraged through the slightest tint of earthy tones.
 \
 \
