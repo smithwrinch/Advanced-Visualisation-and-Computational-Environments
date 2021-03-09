@@ -21,7 +21,7 @@ My colour palette:
 \
 ![](img/interstellar11.jpg)
 \
-I think the colours here represent a feel of inhospitality and emptiness. The icy  light blue give an impression of an environment that is unwelcoming and the little variation in tone makes this environment seem vast and unnatural, encouraged through the slightest tint of earthy tones.
+I think the colours here represent a feel of inhospitality and emptiness. The icy  light blue give an impression of an environment that is cold and unwelcoming and the little variation in tone makes this environment seem vast and unnatural, encouraged through the slightest tint of earthy tones.
 \
 \
 My colour palette:
@@ -37,7 +37,8 @@ My colour palette:
 Having learned about the Cornell box (although this is primarily used to benchmark render engines) I made my own, consisting of 4 walls and 5 spheres. It gave a different effect to what I initially aimed for but I am pleased with the results. I thought omitting the back wall would bring focus on the colours and contents of the scene more but instead it supplied a darkness. It worked well for both of my gloomy scenes but I think a different backdrop would be necessary for happier/brighter scenes which kind of defeats the point of the Cornell box. It still gives off similar feels to my initial descriptions, however, so I will leave it like this.
 
 ### Part 2 - Create an environment that has a dramatic feel to it
-I created a simple sand environment with two different colour schemes. The first gives me vibes of tranquil and calmness in a paradisical light blue sublty mixing with an earthly light brown. The second feels like etc.,...........
+I created a simple sand environment with two different colour schemes to give two different effects. The first sets an impression of tranquility and calmness in a paradisical light blue sublty mixing with an earthly light brown. The second feels dangerous and uninviting, an environment that seems too hot or cold to experience. 
+\
 \
 ![](img/nice.png)
 \
