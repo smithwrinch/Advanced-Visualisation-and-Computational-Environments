@@ -39,6 +39,6 @@ Having learned about the Cornell box (although this is primarily used to benchma
 ### Part 2 - Create an environment that has a dramatic feel to it
 I created a simple sand environment with two different colour schemes. The first gives me vibes of tranquil and calmness in a paradisical light blue sublty mixing with an earthly light brown. The second feels like etc.,...........
 \
-![](img/blue.png)
+![](img/nice.png)
 \
 ![](img/red.png)
