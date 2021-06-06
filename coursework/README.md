@@ -21,17 +21,17 @@ Adding to this, it is important to state that that everyone experiences mental h
 - Limbo
 
 ### Process
-Having suffered depression and anxiety, I decided to focus on these illnesses. In order to prevent myself considering my experiences as general, I asked many friends, who had dealt/are dealing with one or both, what their experiences were/are like. Many words were consistently repeated across my observations. 
+Having suffered depression and anxiety, I decided to focus on these illnesses. In order to prevent myself considering my experiences as general, I asked many friends, who had dealt/are dealing with one or both, what their experiences were/are like. These were some of the most common words repeated across my observations. 
 \
 \
-Depression: isolated, hopeless, unsatisfied, cold, tired, despair, endless, unrelenting
+Depression: isolated, hopeless, unsatisfied, cold, tired, despair, endless, unrelenting, unfulfilment,
 \
-Anxiety: jarring, overwhelmed, uncontrollable, worry, hyper-aware, fight-or-flight
+Anxiety: jarring, overwhelmed, uncontrollable, pressured, worry, hyper-aware, fight-or-flight, alienated
 \
 \
 Following this qualitative analysis, I selected the ocean scene to represent depression. I often considered battling depression was similar to traversing a stormy sea. An ocean seems *endless* and the idea of the player battling turbulent waves could convey *hopelessness* and *despair*, whilst trying to reach an *ioslated* lighthouse with seemingly few amnetities, evoking a degree of *dissatisfaction*. For anxiety, I chose the moon scene. It was particularly difficult for me to devise a natural environment to represent anxiety (possibly because many of the discussions attributed anxiety to particularly artificial means, such as social media). As such, the moon seemed the most ideal to add these man-made pressures and distractions, through the perspective of science fiction. Having the player glide *uncontrollably* with each step in low gravity as their heads up display *overwhelms* them with information, pointing towards the base that contains the necessary oxygen which is *worryingly* running out as they hear the *jarring* sounds of alarm.
 #### Ocean Scene
-For the ocean I forked ["#"](this) excellent project. It uses compute shaders and Fast Fourier transforms to create a computationally inexpensive realistic body of water. 
+For the ocean I forked [this](#) excellent project. It uses compute shaders and Fast Fourier transforms to create a computationally inexpensive realistic body of water. 
 <!--- PICTURE OF OCEAN --->
 I will briefly explain how this works. Realistic wave patterns can be formed using Gerber waves. Gerber waves are the waveform produced when each "node" oscillates about a circle. The waves feature increased authenticity when Gerber waves with different parameters are summated. However, even if this were to be done through shaders, the computation quickly becomes expensive with large amounts of vertices - with a complexity of O(n^2). Using discrete FFTs to summate these waves drastically increases efficiency, with a complexity of O(nlogn). The vertices are calculated through compute shaders in this fashion, they are also rendered in cascades such that the quality/computation diminishes as you go further from the player camera.
 <!--- Photo of Gerber Wave --->
@@ -117,8 +117,28 @@ Now that terrain was sorted, I needed to add the ability to control the player. 
 ![moon base](basee.PNG)
 \
 ### Walkthrough
+There are currently three game modes to select from: both depression and anxiety, just depression, and just anxiety. These can be selected through the menu:
+\
+![menu scene](menu.PNG)
+\
+Clicking begin, you will play through both scenes alternatley whereas the other two plays through just one scene. There are three levels to each scene which, on completion, reverts back to the starting level. This was an artistic decision in an attempt to represent the fact that these conditions are ongoing - and can go through repeated cycles of intensity. Below is the about scene:
+\
+![about scene](about.PNG)
+#### Ocean Scene
+#### Moon Scene
 ### Evaluation
+
 ### Future work
+As aforementioned in the evaluation, work remains to be done before I am completely happy with this project. To begin, I would like to carry out more research from people suffering from mental health conditions - ideally in a more quantative manner. This time round I could gather data in the form of feedback from the game in its current state, as well as a more tailored survey asking questions before and after seeing the game. 
+\
+\
+For the ocean scene I would like to add weather to add some pathetic fallacy - hopefully culiminating in a more somber mood. It was rather low down on my priorities and I ran out of time. Also, it was important to me the scene for depression wasn't classically sad - as most people deem depression to only be. In my mind, and others from discussions, depression manifests itself differently to sadness - but it is still a symptom. In this way, I would like to experiment with the weather. Additionally, I would like to improve the lighthouses beam of light, I feel it's simplicity detracts from the realness of the scene. Other minor changes would include an affect on the (currently non-existant) HUD, as the water aggressively crashes with the boat. The boat movement may also be improved, by allowing the water to inflict a horizontal force component, as opposed to just the vertical.
+\
+\
+The moon scene, in my opinion, needs more work than the lighthouse scene in terms of realism. Perhaps adding some fog at the edges of the grid, or a more realistic light source could fix the rather artificial terrain. Additionally, I would like to replace the skybox with one that is more dynamic, maybe also including a sun with a lens flare. The crater in which the moon base spawns also looks very artificial, I plan to work on tapering the edges to a flat bed as opposed to suddenly changing to flat.
+\
+\
+Finally, I would love to accomodate for other mental health conditions/disorders, such as bipolar disorder, schizophrenia, ADHD, and autism. Depending on the feedback, I would go through a similar process as with anxiety and depression. Ideally, adding VR functionality would complete the project - I believe this would the perfect medium to deploy and emulate these perspectives and experiences. Of course at this stage, the project would have to be heavily adapted with the possibility of a complete overhaul in the gameplay mechanics.  
 <!--- 
 Quantitive evaluation as opposed to qualitative
 Water width and height
