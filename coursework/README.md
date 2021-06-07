@@ -56,6 +56,19 @@ private void rotateRightPaddle(float factor){
     paddleRight.transform.localRotation = Quaternion.Euler(new Vector3(x*50, y*50 - 180, z*30));
 }
 ```
+The boat mechanics were almost complete. However, the water would render inside the boat which made the vessel seem like it was sinking. To fix this I added a depth mask to a clone copy of the boat, but upside down. This drew onto the depth buffer.
+```
+Shader "Masked/Mask" {
+	SubShader {
+		Tags {"Queue" = "Geometry+10" }
+		// Don't draw in the RGBA channels; just the depth buffer
+		ColorMask 0
+		ZWrite On
+		Pass {}
+	}
+}
+```
+![upside_down](upside_down.PNG)
 Now that I was pleased with the motion, I needed to add the lighthouse. Having rarely used Blender to model before, I followed [this]() tutorial using below as the reference picture:
 \
 ![reference lighthouse](Capture.PNG)
@@ -121,13 +134,33 @@ There are currently three game modes to select from: both depression and anxiety
 \
 ![menu scene](menu.PNG)
 \
-Clicking begin, you will play through both scenes alternatley whereas the other two plays through just one scene. There are three levels to each scene which, on completion, reverts back to the starting level. This was an artistic decision in an attempt to represent the fact that these conditions are ongoing - and can go through repeated cycles of intensity. Below is the about scene:
+Clicking begin, you will play through both scenes alternatley whereas the other two plays through just one scene. There are three levels to each scene which, on completion, reverts back to the starting level. This was an artistic decision in an attempt to represent the fact that mental health conditions are ongoing - and can go through repeated cycles of intensity. Below is the scene shown when the player clicks "About":
 \
 ![about scene](about.PNG)
 #### Ocean Scene
+##### Level 1
+![about scene](ol1.PNG)
+##### Level 3
+![about scene](ol3.PNG)
+##### The lighthouse
+![about scene](lighthouse.PNG)
 #### Moon Scene
+##### Level 1
+![about scene](ol1.PNG)
+![about scene](ol3.PNG)
+##### Level 3
+##### The moonbase
+![about scene](lighthouse.PNG)
+\
+If you would like to see a video walkthrough, please click [here]().
 ### Evaluation
-
+Whilst I am pleased with what I have created, I would not consider this work complete. Most clearly, a lot more focus was placed on the ocean/depression scene and it's aesthetic, compared to the moon/anxiety scene. This was due to being too ambitious with what I could achieve - running out of time. There were many more snags along the way than I anticipated/allocated time for. This project remains a humbling reminder as to how head-achey game development can be! 
+\
+\
+Thinking back to the motivations, there were two main purposes of this project. The first, and least significant, was to improve my knowledge of Blender. Going from near zero experience to modelling all but one model in the project, I feel that I satisfied this goal. The most important purpose for this work, however, was to give people accurate insights into the experience of those dealing with anxiety and depression. From my persepctive TODO
+\
+\
+However, in order to have a thourough evaluation, I asked some of my friends (both sufferers and non-sufferers of mental health issues) to play the game. 
 ### Future work
 As aforementioned in the evaluation, work remains to be done before I am completely happy with this project. To begin, I would like to carry out more research from people suffering from mental health conditions - ideally in a more quantative manner. This time round I could gather data in the form of feedback from the game in its current state, as well as a more tailored survey asking questions before and after seeing the game. 
 \
@@ -139,7 +172,3 @@ The moon scene, in my opinion, needs more work than the lighthouse scene in term
 \
 \
 Finally, I would love to accomodate for other mental health conditions/disorders, such as bipolar disorder, schizophrenia, ADHD, and autism. Depending on the feedback, I would go through a similar process as with anxiety and depression. Ideally, adding VR functionality would complete the project - I believe this would the perfect medium to deploy and emulate these perspectives and experiences. Of course at this stage, the project would have to be heavily adapted with the possibility of a complete overhaul in the gameplay mechanics.  
-<!--- 
-Quantitive evaluation as opposed to qualitative
-Water width and height
---->
