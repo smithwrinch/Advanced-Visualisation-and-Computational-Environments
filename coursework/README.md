@@ -46,7 +46,7 @@ if(transform.position.y < waveHeight)
     rigidBody.AddTorque(displacementMultplier * -rigidBody.angularVelocity* waterAngularDrag* Time.fixedDeltaTime, ForceMode.VelocityChange);
 }
 ```
-This behaviour was tied to four empty game objects (floaters) under the boat object. These directly translated the effect of the water at each corner of the boat. I then added a controller which applied forces to the boat subject to WASD keys. There would also be logic to reset the boat to its initial position if it capsised. Below is a snippet of the code used to illustrate the realistic motion of the paddles (it took me far too many headaches to get this right):
+This behaviour was tied to four empty game objects (floaters) under the boat object. These directly translated the effect of the water at each corner of the boat. I then added a controller which applied forces to the boat subject to WASD keys. There would also be logic to reset the boat to its initial position if it capsised. Below is a snippet of the code used to illustrate the realistic motion of the paddles:
 ```
 private void rotateRightPaddle(float factor){
     t_r -= (Mathf.Abs(factor)/ factor)*Time.deltaTime;
@@ -69,13 +69,14 @@ Shader "Masked/Mask" {
 }
 ```
 ![upside_down](upside_down.PNG)
+\
 Now that I was pleased with the motion, I needed to add the lighthouse. Having rarely used Blender to model before, I followed [this]() tutorial using below as the reference picture:
 \
 ![reference lighthouse](Capture.PNG)
 \
 After I was happy with the lighthouse, I modelled some rocks. I subdivided a cube and applied a displacement modifier following a Voronoi texture. I also created a custom material with a geometry node to change its pointiness. These rocks were planned to be around the lighthouse, but when I translated them to unity, they lost their low polygon count as the modifiers were rasterised. As a result, I used rocks from the unity asset store instead, to keep the game lag-free.  
 \
-![lighthouse](LIGHTHOUSE.PNG)
+![lighthouse](LIGTHOUSE.PNG)
 ![lighthouse and rocks](modeling.PNG)
 ![rocks](shading.PNG)
 \
@@ -130,7 +131,7 @@ Now that terrain was sorted, I needed to add the ability to control the player. 
 ![moon base](basee.PNG)
 ![moon base](moondoor.PNG)
 \
-Due to the varying altitudes of terrain I needed to find a way to ensure the base spawned on a flat surface. With the selected spawn chunk coordinates given by the level, I carved out a circular crator in that chunk to allow a realistic bed for the moon base to rest on. 
+Due to the varying altitudes of terrain I needed to find a way to ensure the base spawned on a flat surface. With the selected spawn chunk coordinates given by the level, I carved out a circular crater in that chunk, to allow a realistic bed for the moon base to rest on. 
 \
 ![crater](crater.PNG)
 \
@@ -156,27 +157,29 @@ There are currently three game modes to select from: both depression and anxiety
 \
 ![menu scene](menu.PNG)
 \
-Clicking begin, you will play through both scenes alternatley whereas the other two plays through just one scene. There are three levels to each scene which, on completion, reverts back to the starting level. This was an artistic decision in an attempt to represent the fact that mental health conditions are ongoing - and can go through repeated cycles of intensity. Below is the scene shown when the player clicks "About":
+Clicking begin, you will play through both scenes alternatley whereas the other two plays through just one scene. There are three levels to each scene which, on completion, reverts back to the starting level. This was an artistic decision, in part to represent the fact that mental health conditions are ongoing - and can go through repeated cycles of intensity. As in most roads to recovery, there are relapses and cycles. Below is the scene shown when the player clicks "About":
 \
 ![about scene](about.PNG)
 #### Ocean Scene
+A main intention of this scene was to convey a sense of unsatisfaction. I attempted to achieve this by making the ocean seem empty and vast with just one object: the lighthouse. It is not clear, at least at the start, what the purpose is to get to the lighthouse. With nothing else to do, the player is drawn to it. One could draw comparisons to a depressed person trying to find the purpose in everyday life, living on each day as if reaching their lighthouse. Not because they necessarily want to get there, but because they feel like there is nothing else to do, or that it is expected of them. Once the player arrives, there is meant to be little sense of accomplishment. As the levels progress, it becomes increasingly hard to reach this destination. A friend told me that during bad depressive episodes, straightforward tasks, such as getting getting out of bed and brushing their teeth, are often too demmanding. The levels behave this way to illustrate that insight; the same seemingly simple task of rowing to the lighthouse becomes deceptively difficult. Even after completing the hardest level, and gaining the most fulfilment, the scene quickly reverts back to the calm sea, reminding the player that people with depression often fail to recognise their accomplishments. Some people mentioned that their heads become slower when they are feeling depressed, so I included delay and momentum when looking around with the mouse, as well as pivoting around a slight offset, to represent not thinking with complete clarity. Finally, in all but the hardest level, the boat can remain stationary and not have to respawn (due to capsizing). This serves to show that when depression becomes so severe, the person dealing with it absolutely needs help/a force/push in order to stay above water. 
 ##### Level 1
-![about scene](ol1.PNG)
+![Ocean Level 1](ol1.png)
 ##### Level 3
-![about scene](ol3.PNG)
+![Ocean Level 3](ol3.png)
 ##### The lighthouse
-![about scene](lighthouse.PNG)
+![the lighthouse](lighthouse.png)
 #### Moon Scene
+
 ##### Level 1
 ![about scene](ol1.PNG)
 ![about scene](ol3.PNG)
 ##### Level 3
 ##### The moonbase
-![about scene](lighthouse.PNG)
+![about scene](moonbase.PNG)
 \
 If you would like to see a video walkthrough, please click [here]().
 ### Evaluation
-Whilst I am pleased with what I have created, I would not consider this work complete. Most clearly, a lot more focus was placed on the ocean/depression scene and it's aesthetic, compared to the moon/anxiety scene. This was due to being too ambitious with what I could achieve - running out of time. There were many more snags along the way than I anticipated/allocated time for. This project remains a humbling reminder as to how head-achey game development can be! 
+Whilst I am pleased with what I have created, I would not consider this work complete. Most clearly, a lot more focus was placed on the ocean/depression scene and it's aesthetic, compared to the moon/anxiety scene. This was due to being too ambitious with what I could achieve - and running out of time. There were many more snags along the way than I anticipated/allocated time for. This project remains a reminder as to how head-achey game development can be! 
 \
 \
 Thinking back to the motivations, there were two main purposes of this project. The first, and least significant, was to improve my knowledge of Blender. Going from near zero experience to modelling all but one model in the project, I feel that I satisfied this goal. The most important purpose for this work, however, was to give people accurate insights into the experience of those dealing with anxiety and depression. From my persepctive TODO
