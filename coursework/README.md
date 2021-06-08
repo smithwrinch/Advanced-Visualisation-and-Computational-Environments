@@ -171,7 +171,7 @@ Very calm sea, lighthouse is close by.
 ##### Level 2
 Lighthouse is further away and waves are reasonably turbulent. Can capsise if the player is not careful.
 ##### Level 3
-![Ocean Level 3](ol3.png)
+![Ocean Level 3](ol3.PNG)
 \
 Waves are very tall and frequent. The player can barely see the lighthouse. The player will capsise.
 ##### The lighthouse
@@ -181,11 +181,11 @@ For many people I asked, a big part of anxiety is how quickly it can uncontrolla
 ##### Level 1
 Only the arrow on the HUD. The base is close by and there is no oxygen limit.
 ##### Level 2
-![Moon Level 2](ml2.png)
+![Moon Level 2](ml2.PNG)
 \
 Oxygen limit of 185 seconds, the base is further away but the player can reach it in some comfort. A warning sign and light on the HUD shines at 50% oxygen.
 ##### Level 3
-![Moon Level 2](ml3.png)
+![Moon Level 2](ml3.PNG)
 \
 Player has to traverse the terrain quickly as the base is very far away. After half the oxygen drops, arrow spins erratically and warning sign is shown, red light blinks. At 25% the distance reads an error and another warning sign is introduced, red light blinks quickly. The player will not make it the first time.
 ##### The moonbase
