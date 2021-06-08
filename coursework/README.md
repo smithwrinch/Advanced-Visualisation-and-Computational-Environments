@@ -14,7 +14,7 @@ Adding to this, it is important to state that that everyone experiences mental h
 ### Inspiration
 Bioshock infinite lighthouse scene
 \
-![bioshock](bioshock.png)
+![bioshock](biosock.png)
 \
 Kerbal space program mun landing
 \
@@ -26,7 +26,7 @@ Limbo
 \
 An Aspie Life
 \
-![aspielife(aspie.jpg)
+![aspielife](aspie.jpg)
 \
 ### Process
 Having suffered depression and anxiety, I decided to focus on these illnesses. In order to prevent myself considering my experiences as general, I asked many friends, who had dealt/are dealing with one or both, what their experiences were/are like. These were some of the most common words repeated across my observations. 
@@ -202,7 +202,7 @@ Player has to traverse the terrain quickly as the base is very far away. After h
 #### Youtube Video
 [![Walkthrough](https://img.youtube.com/vi/WCNnn20mysU/0.jpg)](https://www.youtube.com/watch?v=WCNnn20mysU)
 #### Itch.io
-To play the game click [here]()
+To play the game click [here](https://smithwrinch.itch.io/mental-health-game)
 ### Evaluation
 Whilst I am pleased with what I have created, I would not consider this work complete. Most clearly, a lot more focus was placed on the ocean/depression scene and it's aesthetic, compared to the moon/anxiety scene. This was due to being too ambitious with what I could achieve - and running out of time. There were many more snags along the way than I anticipated/allocated time for. This project reminded me how head-achey game development can be. Most importantly, however, this project lacks any sound. Sound is an incredibly useful tool in developing immersion. For this project to be complete, it would need sound. It is worth noting, I did hastily add sound but I took it out, as I didn't think it did the project justice and detracted from the overrall experience. 
 \
