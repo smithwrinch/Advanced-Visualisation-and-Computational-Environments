@@ -12,11 +12,22 @@ After getting feedback, my supervisor suggested combining the two ideas. I knew 
 \
 Adding to this, it is important to state that that everyone experiences mental health differently. This project, or any other, can in no way encapsulate the entire range of emotions and feelings mental health causes.
 ### Inspiration
-- Bioshock infinite
-- Depression game
-- Kerbal Space Program
-- Limbo
-
+Bioshock infinite lighthouse scene
+\
+![bioshock](bioshock.png)
+\
+Kerbal space program mun landing
+\
+![kerbal](kerbal.jpg)
+\
+Limbo
+\
+![limbo](limbo.jpg)
+\
+An Aspie Life
+\
+![aspielife(aspie.jpg)
+\
 ### Process
 Having suffered depression and anxiety, I decided to focus on these illnesses. In order to prevent myself considering my experiences as general, I asked many friends, who had dealt/are dealing with one or both, what their experiences were/are like. These were some of the most common words repeated across my observations. 
 \
