@@ -35,7 +35,7 @@ For the ocean I forked [this](#) excellent project. It uses compute shaders and 
 <!--- PICTURE OF OCEAN --->
 I will briefly explain how this works. Realistic wave patterns can be formed using Gerber waves. Gerber waves are the waveform produced when each "node" oscillates about a circle. The waves feature increased authenticity when Gerber waves with different parameters are summated. However, even if this were to be done through shaders, the computation quickly becomes expensive with large amounts of vertices - with a complexity of O(n^2). Using discrete FFTs to summate these waves drastically increases efficiency, with a complexity of O(nlogn). The vertices are calculated through compute shaders in this fashion, they are also rendered in cascades such that the quality/computation diminishes as you go further from the player camera.
 <!--- Photo of Gerber Wave --->
-I then needed the boat to be displaced according to the ocean vertices it rested on. Whilst I modelled everything else, I did not have time to model a boat so I used a free prefab from Unity's asset store. Additionally, the boats aesthetic was exactly how I imagined, and any attempt I made to replicate would be a poor mans copy. After spending considerable time understanding how the ocean worked, it was pretty easy to reverse engineer and extrapolate vertex heights at a given position. For realistic buoyancy, I created a script called Floater:
+I then needed the boat to be displaced according to the ocean vertices it rested on. Whilst I modelled everything else, I did not have time to model a boat so I used a free prefab from Unity's asset store. Additionally, the boats aesthetic was exactly how I imagined, and any attempt I made to replicate would be a poor mans copy. After spending considerable time understanding how the ocean worked, it was pretty easy to reverse engineer and extrapolate vertex heights at a given position. For realistic buoyancy physics, I created a script called Floater:
 ```
 rigidBody.AddForceAtPosition(Physics.gravity/floaterCount, transform.position, ForceMode.Acceleration);
 if(transform.position.y < waveHeight)
@@ -125,10 +125,32 @@ The next task was to ensure that the textures between chunks lined up correctly.
 ![moon shaded](shader.PNG)
 ![moon shaded 2](shaderr.PNG)
 \
-Now that terrain was sorted, I needed to add the ability to control the player. I added a mesh collider to the terrain and a rigid body to the player, with reduced gravity. Logic was placed such that the player could only move if they were touching the ground. Next, I modelled a moon base in blender. 
+Now that terrain was sorted, I needed to add the ability to control the player. I added a mesh collider to the terrain and a rigid body to the player, with reduced gravity. Logic was placed such that the player could only move if they were touching the ground. Next, I modelled a moon base and door in blender. These were then textured in Unity. 
 \
 ![moon base](basee.PNG)
+![moon base](moondoor.PNG)
 \
+Due to the varying altitudes of terrain I needed to find a way to ensure the base spawned on a flat surface. With the selected spawn chunk coordinates given by the level, I carved out a circular crator in that chunk to allow a realistic bed for the moon base to rest on. 
+\
+![crater](crater.PNG)
+\
+There were some issues shading inside the crater, but I decided to leave the effect in (the bug becomes a feature...). This was because the sharp darkness gave an impression that the player was beginning to pass out; I wanted the player to believe that they were running out of oxygen at this stage of the level.     
+\
+![dark shading at crater](prob.PNG)
+\
+After adding simple logic to deal with the players remaining oxygen, I needed a HUD to display this and other information. I modelled a simple set up in Blender and added it to unity under a new helmet layer with a new camera.
+\
+![HUD Blender](hudd.PNG)
+\
+I created another camera for a UI layer, and targeted its output to a render texture. This was projected on the glass pane in front of the HUD. 
+\
+![HUD](HUD.PNG)
+![UI](UI.PNG)
+\
+After fiddling for a bit, I got the arrow to correctly point at the base, as well as display the oxygen level and distance on the HUD. 
+\
+![Arrow](crater_arrow.PNG)
+
 ### Walkthrough
 There are currently three game modes to select from: both depression and anxiety, just depression, and just anxiety. These can be selected through the menu:
 \
